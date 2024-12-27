@@ -9,3 +9,43 @@
   list-style: none;
   text-decoration: none;
 }
+/* Root Variables */
+:root {
+  --color-nav: #f8f8f8;
+}
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 3.5rem;
+}
+/* Block & Container */
+.block {
+  padding: 0 2rem;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* Navbar */
+.main-header {
+  background-color: var(--color-nav);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__items {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__items {
+    display: flex;
+    gap: 3rem;
+  }
+}
