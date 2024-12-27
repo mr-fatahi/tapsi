@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'vazir';
+  src: url('/public/fonts/Vazir-Light.woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'vazir';
+  src: url('/public/fonts/Vazir-Bold.woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body,
+button,
+::placeholder {
+  font-family: 'vazir';
+}
