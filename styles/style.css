@@ -12,6 +12,9 @@
 /* Root Variables */
 :root {
   --color-nav: #f8f8f8;
+  --color-primary: #ff5722;
+  --color-white: #fff;
+  --radius-md: 8px;
 }
 /* Typography */
 html {
@@ -31,6 +34,18 @@ h1 {
   max-width: 1140px;
   margin: 0 auto;
 }
+/* Buttons */
+.btn {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 1rem 3rem;
+  border-radius: var(--radius-md);
+}
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
 /* Navbar */
 .main-header {
   background-color: var(--color-nav);
@@ -39,6 +54,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 0;
 }
 .nav__items {
   display: none;
@@ -46,6 +62,20 @@ h1 {
 @media screen and (min-width: 768px) {
   .nav__items {
     display: flex;
+    align-items: center;
     gap: 3rem;
   }
+  .nav__item > a {
+    transition: all 0.2s ease-in;
+  }
+  .nav__item > a:hover {
+    color: var(--color-primary);
+  }
+}
+/* Banner */
+.main__banner {
+  background-image: url('/public/images/banner.png');
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
 }
