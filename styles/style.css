@@ -14,7 +14,9 @@
   --color-nav: #f8f8f8;
   --color-primary: #ff5722;
   --color-white: #fff;
+  --color-black: #000;
   --radius-md: 8px;
+  --radius-lg: 32px;
 }
 /* Typography */
 html {
@@ -25,6 +27,14 @@ body {
 }
 h1 {
   font-size: 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
 }
 /* Block & Container */
 .block {
@@ -56,6 +66,9 @@ h1 {
   align-items: center;
   padding: 0.5rem 0;
 }
+.nav__logo > h1 {
+  font-size: 3.5rem;
+}
 .nav__items {
   display: none;
 }
@@ -73,9 +86,72 @@ h1 {
   }
 }
 /* Banner */
-.main__banner {
+.banner {
   background-image: url('/public/images/banner.png');
   min-height: 70vh;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+.banner__links {
+  background: rgb(23, 26, 60);
+  background: linear-gradient(90deg, rgba(23, 26, 60, 0.7) 0%, rgba(23, 26, 60, 0.3) 0%);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%);
+}
+.banner__links__title {
+  margin-bottom: 1.5rem;
+}
+.banner__links__subtitle {
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+.banner__links__icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.banner__links__icon {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+}
+.banner__links__icon--solid {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+.banner__links__icon--outline {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+.banner__mockupPhone {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .banner__links {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(-10%);
+  }
+  .banner__links__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__mockupPhone {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 7%;
+  }
+  .banner__mockupPhone__img {
+    width: 560px;
+    height: 860px;
+  }
 }
