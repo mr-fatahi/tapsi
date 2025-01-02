@@ -14,6 +14,7 @@
   --color-nav: #f8f8f8;
   --color-primary: #ff5722;
   --color-primary-light: #ffa589;
+  --color-primary-dark: #ff7a50;
   --color-secondary: #fff6f2;
   --color-body: #333333;
   --color-white: #fff;
@@ -291,11 +292,23 @@ h3 {
   }
 }
 /* Plans */
-.plan {
-  margin-bottom: 3rem;
-  padding: 0 6rem;
+.plans {
+  margin-bottom: 7rem;
 }
-.plan__title {
+.plans__container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+  gap: 3rem;
+}
+.plan {
+  transition: all 0.2s ease-in;
+  margin: 2rem 0;
+}
+.plan:hover {
+  transform: scale(1.1);
+}
+.plans__title {
   margin-bottom: 3rem;
 }
 .plan__header {
@@ -305,6 +318,9 @@ h3 {
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
 }
+.plan__header.center {
+  background-color: var(--color-primary-dark);
+}
 .plan__type {
   display: flex;
   justify-content: space-between;
@@ -313,11 +329,18 @@ h3 {
 }
 .plan__price {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 .plan__price h3 {
   color: var(--color-white);
+}
+.plan__price span {
+  font-size: 1.5rem;
+}
+.plan__usage {
+  white-space: nowrap;
 }
 .plan__body {
   padding: 5rem 3rem 1rem;
@@ -325,6 +348,9 @@ h3 {
   border-bottom-right-radius: var(--radius-lg);
   border-bottom-left-radius: var(--radius-lg);
   opacity: 70%;
+}
+.plan__header.center + .plan__body {
+  opacity: 100%;
 }
 .plan__features {
   display: flex;
@@ -342,4 +368,35 @@ h3 {
 }
 .plan__body button {
   margin-bottom: 4rem;
+}
+/* Contact-us */
+.bg-twitter {
+  width: 42px;
+  height: 41px;
+  background: url('/public/images/css_sprites.png') -10px -10px;
+}
+.bg-calling {
+  width: 22px;
+  height: 35px;
+  background: url('/public/images/css_sprites.png') -134px -10px;
+}
+.bg-facebook {
+  width: 42px;
+  height: 41px;
+  background: url('/public/images/css_sprites.png') -72px -10px;
+}
+.bg-linkdin {
+  width: 42px;
+  height: 41px;
+  background: url('/public/images/css_sprites.png') -10px -71px;
+}
+.bg-location {
+  width: 27px;
+  height: 33px;
+  background: url('/public/images/css_sprites.png') -72px -71px;
+}
+.bg-mail {
+  width: 28px;
+  height: 23px;
+  background: url('/public/images/css_sprites.png') -10px -132px;
 }
